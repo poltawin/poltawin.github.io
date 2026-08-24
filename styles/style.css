@@ -349,3 +349,63 @@ a.link--download::after{
         text-align: left;
     }
 }
+
+/* ---------- progressive disclosure ("show all") ---------- */
+
+.more{
+    margin-top: 1em;
+}
+
+.more summary{
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.85em;
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    padding: 0.4em 0;
+    transition: 0.3s;
+}
+
+.more summary::-webkit-details-marker{
+    display: none;
+}
+
+.more summary:hover{
+    color: var(--mainLinkColor);
+}
+
+.more summary::after{
+    content: "\25BE";
+    font-size: 0.9em;
+    transition: transform 0.3s;
+}
+
+.more[open] summary::after{
+    transform: rotate(180deg);
+}
+
+.more .more__hide,
+.more[open] .more__show{
+    display: none;
+}
+
+.more[open] .more__hide{
+    display: inline;
+}
+
+.more__body{
+    animation: more-in 0.25s ease-out;
+}
+
+@keyframes more-in{
+    from{ opacity: 0; transform: translateY(-4px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+@media print{
+    .more summary{ display: none; }
+    .more__body{ display: block !important; animation: none; }
+}
