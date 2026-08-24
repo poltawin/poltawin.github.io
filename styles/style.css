@@ -43,7 +43,7 @@ a{
 }
 
 li{
-    line-height: 1em;
+    line-height: 1.6em;
 }
 
 #container--main{
@@ -66,11 +66,14 @@ li{
 #bio, a{
     font-weight: 300;
     line-height:1.5em;
+    overflow-wrap: break-word;
 }
 
 #user-name{
-    font-size: 48px;
-    line-height: 1em;
+    /* fluid so the name can never outgrow a phone screen */
+    font-size: clamp(2rem, 8.5vw, 48px);
+    line-height: 1.05em;
+    overflow-wrap: break-word;
 }
 
 #profile-pic{
@@ -313,8 +316,8 @@ a.link--download::after{
     }
 
     #profile-pic{
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
     }
 
     #wrapper--hero{
@@ -335,6 +338,17 @@ a.link--download::after{
         flex-direction: column;
         gap: 0.5em;
     }
+
+    /* finger-sized tap targets */
+    #socials--list a{
+        display: inline-block;
+        padding: 0.45em 0;
+    }
+
+    .more summary{
+        padding: 0.7em 0;
+    }
+
 
     .page-title{
         font-size: 36px;
