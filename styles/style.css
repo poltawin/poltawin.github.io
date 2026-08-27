@@ -245,8 +245,17 @@ a.link--download::after{
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     border-radius: 5px;
-    padding: 0.5em 1em;
+    padding: 0.7em 1em;
     align-items: center;
+}
+
+.techstack__label{
+    display: block;
+    font-size: 0.72em;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 0.4em;
 }
 
 .card--project{
