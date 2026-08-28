@@ -1,0 +1,72 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>OG image review — not published</title>
+<style>
+  body{margin:0;background:#0e0f10;color:#e8eaec;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:40px}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1{font-size:26px;margin:0 0 6px}
+  .note{color:#9aa0a6;margin-bottom:8px}
+  .warn{background:#3a2a12;border:1px solid #7a5a22;color:#f0c98a;padding:12px 16px;border-radius:8px;margin:18px 0 34px}
+  h2{font-size:19px;margin:44px 0 4px}
+  .sub{color:#9aa0a6;font-size:14px;margin-bottom:16px}
+  .full{width:100%;border-radius:10px;display:block;border:1px solid #26292b}
+  .cards{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px}
+  .li{width:460px;border:1px solid #33383b;border-radius:10px;overflow:hidden;background:#1b1f22}
+  .li img{width:100%;display:block;aspect-ratio:1200/630;object-fit:cover}
+  .li .meta{padding:12px 14px}
+  .li .t{font-weight:600;font-size:15px;color:#fff}
+  .li .d{color:#9aa0a6;font-size:13px}
+  .wa{width:330px;background:#0b141a;border-radius:10px;padding:8px}
+  .wa .bub{background:#005c4b;border-radius:8px;overflow:hidden}
+  .wa img{width:100%;display:block;aspect-ratio:1200/630;object-fit:cover}
+  .wa .meta{padding:8px 10px}
+  .wa .t{font-size:13px;font-weight:600;color:#e9edef}
+  .wa .d{font-size:12px;color:#8696a0}
+  .sq{width:260px}
+  .sq img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block;border:1px solid #26292b}
+  code{background:#1b1f22;padding:2px 6px;border-radius:4px;font-size:13px}
+</style>
+<div class="wrap">
+<h1>Open Graph image — review only</h1>
+<p class="note">Three options for the link preview card. Nothing here is live.</p>
+<div class="warn">
+  <strong>Not published.</strong> These files sit in <code>_og-preview/</code> and are not committed to git.
+  No <code>og:</code> tags have been added to any page. Pasting poltawin.com anywhere still shows a bare URL
+  until you pick one and I wire it up.
+</div>
+
+<h2>A — Typographic</h2>
+<p class="sub">No photo. Cleanest, smallest file (37 KB), ages best if you change the photo later.</p>
+<img class="full" src="og-a.png">
+
+<h2>B — Split panel</h2>
+<p class="sub">Photo panel on the right. Note the visible vertical seam where the fade meets the photo — I'd fix that before shipping this one.</p>
+<img class="full" src="og-b.png">
+
+<h2>C — Photo with scrim</h2>
+<p class="sub">Full-bleed photo, darkened from the left so the text stays readable.</p>
+<img class="full" src="og-c.png">
+
+<h2>How each looks as an actual card</h2>
+<p class="sub">LinkedIn / Slack style on the left, WhatsApp style on the right.</p>
+<div class="cards">
+  <div class="li"><img src="og-a.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div>
+  <div class="wa"><div class="bub"><img src="og-a.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div></div>
+</div>
+<div class="cards">
+  <div class="li"><img src="og-b.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div>
+  <div class="wa"><div class="bub"><img src="og-b.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div></div>
+</div>
+<div class="cards">
+  <div class="li"><img src="og-c.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div>
+  <div class="wa"><div class="bub"><img src="og-c.png"><div class="meta"><div class="t">Pol Tawin Choksitthikasam</div><div class="d">poltawin.com</div></div></div></div>
+</div>
+
+<h2>Square crop check</h2>
+<p class="sub">Some apps crop to a square. Your name survives in all three; the third line does not.</p>
+<div class="cards">
+  <div class="sq"><img src="og-a.png"></div>
+  <div class="sq"><img src="og-b.png"></div>
+  <div class="sq"><img src="og-c.png"></div>
+</div>
+</div>
