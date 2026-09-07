@@ -432,3 +432,133 @@ a.link--download::after{
     .more summary{ display: none; }
     .more__body{ display: block !important; animation: none; }
 }
+
+/* ---------- sub-heading inside a section ---------- */
+
+.subhead{
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+/* ---------- template placeholders ----------
+   Delete the "ph" class from an element once you have written its real
+   content. The dashed rule is deliberately loud so nothing unwritten can
+   reach the live site unnoticed. */
+
+.ph{
+    border-left: 2px dashed #c9803a;
+    padding-left: 0.9em;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.stat .ph,
+.link-group__links .ph{
+    border-left: none;
+    padding-left: 0;
+    text-decoration: underline dashed #c9803a;
+    text-underline-offset: 0.25em;
+}
+
+/* ---------- series list ---------- */
+
+.series-list{
+    margin-top: 1.5em;
+}
+
+.series{
+    display: flex;
+    align-items: baseline;
+    gap: 1.2em;
+    padding: 0.85em 0;
+    border-top: 1px solid var(--mainBorderColor);
+}
+
+.series__name{
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+    color: var(--mainLinkColor);
+    min-width: 11em;
+}
+
+.series__desc{
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+code{
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+    color: var(--mainTextColor);
+}
+
+@media(max-width:600px){
+    .series{
+        flex-direction: column;
+        gap: 0.25em;
+    }
+}
+
+/* ---------- brand logo (light-field artwork on a dark page) ---------- */
+
+.brand-lockup{
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+.brand-logo{
+    width: 108px;
+    height: 108px;
+    flex: none;
+    /* the artwork has a white field and a near-black element, so it needs a
+       light tile rather than being keyed out onto the page background */
+    background: #fff;
+    border-radius: 14px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.brand-lockup .page-title{
+    margin: 0;
+}
+
+.logo-note{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.3em;
+    margin-top: 1.1em;
+}
+
+.brand-logo--sm{
+    width: 78px;
+    height: 78px;
+    border-radius: 11px;
+    padding: 6px;
+}
+
+.logo-note .body-text{
+    margin-bottom: 0;
+}
+
+@media(max-width:600px){
+    .brand-lockup{
+        /* side by side does not fit a 13-character handle on a phone */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7em;
+    }
+
+    .brand-logo{
+        width: 74px;
+        height: 74px;
+        border-radius: 11px;
+    }
+
+    .logo-note{
+        flex-direction: column;
+        gap: 0.9em;
+    }
+}
